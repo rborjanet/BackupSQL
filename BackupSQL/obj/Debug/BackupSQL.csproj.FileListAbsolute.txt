@@ -1,0 +1,7 @@
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\bin\Debug\BackupSQL.exe.config
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\bin\Debug\BackupSQL.exe
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\bin\Debug\BackupSQL.pdb
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\obj\Debug\BackupSQL.csprojAssemblyReference.cache
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\obj\Debug\BackupSQL.csproj.CoreCompileInputs.cache
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\obj\Debug\BackupSQL.exe
+D:\Workspace\BackupSQLSERVER\BackupSQL\BackupSQL\obj\Debug\BackupSQL.pdb
