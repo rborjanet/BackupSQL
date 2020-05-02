@@ -24,6 +24,7 @@ namespace BackupSQL
         private string FileName;
         private string FullBackupURL;
         private int BackupRetention;
+        private int Timeout;
         private bool Debug;
 
 
@@ -38,6 +39,7 @@ namespace BackupSQL
             this.User = ConfigurationManager.AppSettings["User"];
             this.Password = ConfigurationManager.AppSettings["Password"];
             this.BackupRetention = int.Parse(ConfigurationManager.AppSettings["BackupRetention"].ToString());
+            this.Timeout = int.Parse(ConfigurationManager.AppSettings["Timeout"].ToString());
             this.Debug = bool.Parse(ConfigurationManager.AppSettings["Debug"].ToString());
             
             //EN: Creating connection string to connecto with SQL SERVER EXPRESS
@@ -70,6 +72,7 @@ namespace BackupSQL
             {
                 using (SqlCommand command = new SqlCommand())
                 {
+                    command.CommandTimeout = Timeout;
                     command.Connection = connection;
                     command.CommandType = CommandType.Text;
                     command.CommandText = @"BACKUP DATABASE [" + Database + "] TO  DISK = N'" + FullBackupURL + "';";
@@ -178,7 +181,7 @@ namespace BackupSQL
                 System.Console.WriteLine("Failed!");
 
 
-            Console.WriteLine("\nBackupSQL v1.0.0 free tool created by Rodolfo Borja [rborja.net]");
+            Console.WriteLine("\nBackupSQL v1.1.0 free tool created by Rodolfo Borja [rborja.net]");
             Console.WriteLine("Report bugs to rborja.net@gmail.com");
             Console.WriteLine("Donate through PayPal https://www.paypal.me/RodolfoBorjaLopez");
 
